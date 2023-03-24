@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" [checked]="allComplete"
+                                [color]="task.color"
+                                [indeterminate]="someComplete()"
+                                (change)="setAll($event.checked)">Pune</mat-checkbox>
+                            </section>
+                            
+                            <section class="example-section">
+                                <span class="example-list-section">
+                                <mat-checkbox class="example-margin"
+                                                [checked]="allComplete"
+                                                [color]="task.color"
+                                                [indeterminate]="someComplete()"
+                                                (change)="setAll($event.checked)">
+                                    {{task.name}}
+                                </mat-checkbox>
+                                </span>
+                                <span class="example-list-section">
+                                <ul>
+                                    <li *ngFor="let subtask of task.subtasks">
+                                    <mat-checkbox [(ngModel)]="subtask.completed"
+                                                    [color]="subtask.color"
+                                                    (ngModelChange)="updateAllComplete()">
+                                        {{subtask.name}} <img src="./assets/images/01.jpeg" alt="Nature" id="image">
+                                    </mat-checkbox>
+                                    </li>
+                                </ul>
+                                </span>
+                            </section></div>
+                        <div class="col-md-4">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" [checked]="allComplete1"
+                                [color]="task1.color"
+                                [indeterminate]="someComplete1()"
+                                (change)="setAll1($event.checked)">Mumbai</mat-checkbox>
+                            </section>
+                            
+                            <section class="example-section">
+                                <span class="example-list-section">
+                                <mat-checkbox class="example-margin"
+                                                [checked]="allComplete1"
+                                                [color]="task1.color"
+                                                [indeterminate]="someComplete1()"
+                                                (change)="setAll1($event.checked)">
+                                    {{task1.name}}
+                                </mat-checkbox>
+                                </span>
+                                <span class="example-list-section">
+                                <ul>
+                                    <li *ngFor="let subtask1 of task1.subtasks1">
+                                    <mat-checkbox [(ngModel)]="subtask1.completed"
+                                                    [color]="subtask1.color"
+                                                    (ngModelChange)="updateAllComplete1()">
+                                        {{subtask1.name}} <img src="./assets/images/02.jpeg" alt="Nature" id="image">
+                                    </mat-checkbox>
+                                    </li>
+                                </ul>
+                                </span>
+                            </section>
+                        </div>
+                        <div class="col-md-4">
+                            <section class="example-section">
+                                <mat-checkbox class="example-margin" [checked]="allComplete2"
+                                [color]="task2.color"
+                                [indeterminate]="someComplete2()"
+                                (change)="setAll2($event.checked)">Beed</mat-checkbox>
+                            </section>
+                            
+                            <section class="example-section">
+                                <span class="example-list-section">
+                                <mat-checkbox class="example-margin"
+                                                [checked]="allComplete2"
+                                                [color]="task2.color"
+                                                [indeterminate]="someComplete2()"
+                                                (change)="setAll2($event.checked)">
+                                    {{task2.name}}
+                                </mat-checkbox>
+                                </span>
+                                <span class="example-list-section">
+                                <ul>
+                                    <li *ngFor="let subtask2 of task2.subtasks2">
+                                    <mat-checkbox [(ngModel)]="subtask2.completed"
+                                                    [color]="subtask2.color"
+                                                    (ngModelChange)="updateAllComplete2()">
+                                        {{subtask2.name}} <img src="./assets/images/03.jpeg" alt="Nature" id="image">
+                                    </mat-checkbox>
+                                    </li>
+                                </ul>
+                                </span>
+                            </section>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.nav{
+    margin: 10px;
+}
+.nav, a, mat-icon{
+    
+    display: block;
+    margin-top: 80px;
+    font-size: 25px;
+    color: #000;
+}
+a:hover{
+    color: #000;
+}
